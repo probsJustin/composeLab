@@ -1,0 +1,31 @@
+version: "1.0"
+services:
+	flask:
+		build: ./flask/.
+		ports:
+		- "5000:5000"
+	apache2: 
+		build: ./apache2/.
+		ports:
+		- "8080:8080"
+	nginx: 
+		build: ./nginx/.
+		ports:
+		- "80:80"
+	phpmyadmin: 
+		build: ./phpmyadmin/.
+		ports:
+		- "9090:9090"
+	nodejs:
+		build: ./nodejs/.
+		ports:
+		- "81:81"
+	php_apache: 
+		build: ./php_apache/.
+		ports:
+		- "82:82"
+	testing: 
+		build: ./testing/.
+		ports:
+		- "99:99"
+	
