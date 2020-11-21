@@ -1,0 +1,40 @@
+PS C:\Repos\composeLab> docker-compose up
+Creating network "composelab_default" with the default driver
+Creating composelab_phpmyadmin_1 ... done                                                                                                                             Creating composelab_nginx_1      ... done                                                                                                                             Creating composelab_apache2_1    ... done                                                                                                                             Creating composelab_php_apache_1 ... done                                                                                                                             Creating composelab_nodejs_1     ... done                                                                                                                             Creating composelab_flask_1      ... done                                                                                                                             Attaching to composelab_nginx_1, composelab_apache2_1, composelab_php_apache_1, composelab_phpmyadmin_1, composelab_flask_1, composelab_nodejs_1
+apache2_1     | AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+apache2_1     | AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.19.0.4. Set the 'ServerName' directive globally to suppress this message
+apache2_1     | [Sat Nov 21 01:12:53.643969 2020] [mpm_event:notice] [pid 1:tid 139896010232960] AH00489: Apache/2.4.46 (Unix) configured -- resuming normal operations
+apache2_1     | [Sat Nov 21 01:12:53.644176 2020] [core:notice] [pid 1:tid 139896010232960] AH00094: Command line: 'httpd -D FOREGROUND'
+flask_1       | python: can't open file 'app.py': [Errno 2] No such file or directory
+nginx_1       | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx_1       | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx_1       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx_1       | 10-listen-on-ipv6-by-default.sh: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx_1       | 10-listen-on-ipv6-by-default.sh: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx_1       | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx_1       | /docker-entrypoint.sh: Configuration complete; ready for start up
+nginx_1       | 2020/11/21 01:12:53 [emerg] 1#1: no "events" section in configuration
+nginx_1       | nginx: [emerg] no "events" section in configuration
+php_apache_1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+php_apache_1  | AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.19.0.3. Set the 'ServerName' directive globally to suppress this message
+php_apache_1  | [Sat Nov 21 01:12:53.719928 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.34 configured -- resuming normal operations
+php_apache_1  | [Sat Nov 21 01:12:53.719965 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+phpmyadmin_1  | standard_init_linux.go:211: exec user process caused "exec format error"
+composelab_nginx_1 exited with code 1
+nodejs_1      | internal/modules/cjs/loader.js:834
+nodejs_1      |   throw err;
+nodejs_1      |   ^
+nodejs_1      |
+nodejs_1      | Error: Cannot find module '/usr/src/app/server.js'
+nodejs_1      |     at Function.Module._resolveFilename (internal/modules/cjs/loader.js:831:15)
+nodejs_1      |     at Function.Module._load (internal/modules/cjs/loader.js:687:27)
+nodejs_1      |     at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)
+nodejs_1      |     at internal/main/run_main_module.js:17:47 {
+nodejs_1      |   code: 'MODULE_NOT_FOUND',
+nodejs_1      |   requireStack: []
+nodejs_1      | }
+composelab_phpmyadmin_1 exited with code 1
+composelab_flask_1 exited with code 2
+composelab_nodejs_1 exited with code 1
+Gracefully stopping... (press Ctrl+C again to force)
+Stopping composelab_php_apache_1 ... done                                                                                                                             Stopping composelab_apache2_1    ... done                                                                                                                             PS C:\Repos\composeLab>
